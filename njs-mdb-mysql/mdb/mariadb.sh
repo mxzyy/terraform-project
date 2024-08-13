@@ -27,5 +27,6 @@ sudo DEBIAN_FRONTEND=noninteractive apt install nginx php8.3 php8.3-cli php8.3-f
 
 
 # Docker
+sudo wget https://raw.githubusercontent.com/mxzyy/terraform-project/main/njs-mdb-mysql/mdb/docker-compose.yaml
 sudo docker compose up --build
 
