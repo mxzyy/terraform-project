@@ -40,6 +40,16 @@ htpasswd -cb /etc/nginx/.htpasswd admin nimda
 sudo mv default /etc/nginx/sites-available/
 sudo service nginx restart
 
+# NJS
+sudo wget https://raw.githubusercontent.com/mxzyy/terraform-project/main/landing-page/app/index.js
+sudo wget https://raw.githubusercontent.com/mxzyy/terraform-project/main/landing-page/app/package.json
+
+# app
+sudo mkdir app
+sudo mv index.js app
+sudo mv package.json app
+sudo chown -R user:user app
+sudo chmod -R 755 app
 # Docker
 sudo docker compose up --build --detach
 
