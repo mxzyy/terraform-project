@@ -41,13 +41,32 @@ sudo mv default /etc/nginx/sites-available/
 sudo service nginx restart
 
 # NJS
-sudo wget https://raw.githubusercontent.com/mxzyy/terraform-project/main/landing-page/app/index.js
+sudo wget https://raw.githubusercontent.com/mxzyy/terraform-project/main/landing-page/app/app.js
 sudo wget https://raw.githubusercontent.com/mxzyy/terraform-project/main/landing-page/app/package.json
+sudo wget https://raw.githubusercontent.com/mxzyy/terraform-project/main/landing-page/app/tailwind.config.js
+sudo wget https://raw.githubusercontent.com/mxzyy/terraform-project/main/landing-page/app/postcss.config.js
+
+sudo wget https://raw.githubusercontent.com/mxzyy/terraform-project/main/landing-page/app/public/index.html
+sudo wget https://raw.githubusercontent.com/mxzyy/terraform-project/main/landing-page/app/public/404.html
+sudo wget https://raw.githubusercontent.com/mxzyy/terraform-project/main/landing-page/app/public/contact.html
+sudo wget https://raw.githubusercontent.com/mxzyy/terraform-project/main/landing-page/app/public/about
+sudo wget https://raw.githubusercontent.com/mxzyy/terraform-project/main/landing-page/app/public/services.html
+sudo wget https://raw.githubusercontent.com/mxzyy/terraform-project/main/landing-page/app/public/styles.css
 
 # app
 sudo mkdir app
-sudo mv index.js app
+sudo mkdir app/public
+sudo mv app.js app
 sudo mv package.json app
+sudo mv tailwind.config.js app
+sudo mv postcss.config.js app
+sudo mv index.html app/public
+sudo mv 404.html app/public
+sudo mv about.html app/public
+sudo mv contact.html app/public
+sudo mv services.html app/public
+sudo mv styles.css app/public
+
 sudo chown -R user:user app
 sudo chmod -R 755 app
 # Docker
