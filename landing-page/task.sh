@@ -49,7 +49,7 @@ sudo wget https://raw.githubusercontent.com/mxzyy/terraform-project/main/landing
 sudo wget https://raw.githubusercontent.com/mxzyy/terraform-project/main/landing-page/app/public/index.html
 sudo wget https://raw.githubusercontent.com/mxzyy/terraform-project/main/landing-page/app/public/404.html
 sudo wget https://raw.githubusercontent.com/mxzyy/terraform-project/main/landing-page/app/public/contact.html
-sudo wget https://raw.githubusercontent.com/mxzyy/terraform-project/main/landing-page/app/public/about
+sudo wget https://raw.githubusercontent.com/mxzyy/terraform-project/main/landing-page/app/public/about.html
 sudo wget https://raw.githubusercontent.com/mxzyy/terraform-project/main/landing-page/app/public/services.html
 sudo wget https://raw.githubusercontent.com/mxzyy/terraform-project/main/landing-page/app/public/styles.css
 
