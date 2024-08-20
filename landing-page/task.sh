@@ -40,6 +40,12 @@ htpasswd -cb /etc/nginx/.htpasswd admin nimda
 sudo mv default /etc/nginx/sites-available/
 sudo service nginx restart
 
+# docker
+sudo wget https://raw.githubusercontent.com/mxzyy/terraform-project/main/landing-page/nginx.conf -O default
+sudo wget https://raw.githubusercontent.com/mxzyy/terraform-project/main/landing-page/docker-compose.yaml
+sudo wget https://raw.githubusercontent.com/mxzyy/terraform-project/main/landing-page/Dockerfile
+
+
 # NJS
 sudo wget https://raw.githubusercontent.com/mxzyy/terraform-project/main/landing-page/app/app.js
 sudo wget https://raw.githubusercontent.com/mxzyy/terraform-project/main/landing-page/app/package.json
