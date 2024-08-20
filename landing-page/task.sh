@@ -36,12 +36,11 @@ sudo chmod -R 755 /var/www/html/phpinfo/index.php
 htpasswd -cb /etc/nginx/.htpasswd admin nimda
 
 # Nginx Conf
-#wget "https://raw.githubusercontent.com/mxzyy/terraform-project/main/landing-page/nginx.conf" -O default
+sudo wget https://raw.githubusercontent.com/mxzyy/terraform-project/main/landing-page/nginx.conf -O default
 sudo mv default /etc/nginx/sites-available/
 sudo service nginx restart
 
 # docker
-sudo wget https://raw.githubusercontent.com/mxzyy/terraform-project/main/landing-page/nginx.conf -O default
 sudo wget https://raw.githubusercontent.com/mxzyy/terraform-project/main/landing-page/docker-compose.yaml
 sudo wget https://raw.githubusercontent.com/mxzyy/terraform-project/main/landing-page/Dockerfile
 
@@ -54,6 +53,7 @@ sudo wget https://raw.githubusercontent.com/mxzyy/terraform-project/main/landing
 
 sudo wget https://raw.githubusercontent.com/mxzyy/terraform-project/main/landing-page/app/public/index.html
 sudo wget https://raw.githubusercontent.com/mxzyy/terraform-project/main/landing-page/app/public/404.html
+sudo wget https://raw.githubusercontent.com/mxzyy/terraform-project/main/landing-page/app/public/403.html
 sudo wget https://raw.githubusercontent.com/mxzyy/terraform-project/main/landing-page/app/public/contact.html
 sudo wget https://raw.githubusercontent.com/mxzyy/terraform-project/main/landing-page/app/public/about.html
 sudo wget https://raw.githubusercontent.com/mxzyy/terraform-project/main/landing-page/app/public/services.html
@@ -67,11 +67,16 @@ sudo mv package.json app
 sudo mv tailwind.config.js app
 sudo mv postcss.config.js app
 sudo mv index.html app/public
-sudo mv 404.html app/public
+sudo cp -R 404.html app/public
+sudo mv 404.html /var/www/html/
+sudo mv 403.html /var/www/html/
 sudo mv about.html app/public
 sudo mv contact.html app/public
 sudo mv services.html app/public
 sudo mv styles.css app/public
+
+sudo mkdir /var/www/html/test
+sudo echo 'y0u_g0t!_m3+' > /var/www/html/test/flag.txt
 
 sudo chown -R user:user app
 sudo chmod -R 755 app
