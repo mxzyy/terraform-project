@@ -81,6 +81,7 @@ sudo echo 'y0u_g0t!_m3+' > /var/www/html/test/flag.txt
 sudo chown -R user:user app
 sudo chmod -R 755 app
 # Docker
+sudo docker image pull node:14
 sudo docker compose up --build --detach
 
 # 
